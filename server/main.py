@@ -9,8 +9,6 @@ COUNT=0
 ## sudo uvicorn main:app --host 0.0.0.0 --port 80
 ## Zl5EvN4H4u75p77a
 
-
-
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -27,11 +25,11 @@ async def read_item(request: Request, id: str):
 
 @app.get("/switch/off")
 async def trun_off():
-    changeLightBrighteness(findTradfriLights()[0], 0)
-    return
+    changeLightBrighteness(0)
+    return "Success"
 
 
 @app.get("/switch/on")
 async def trun_on():
-    changeLightBrighteness(findTradfriLights()[0], 200)
-    return
+    changeLightBrighteness(200)
+    return "Success"

@@ -10,8 +10,14 @@ To start the server navigate into the *server* directory and execute the followi
 sudo uvicorn main:app --host 0.0.0.0 --port 80
 ```
 
-## GUI
-To acces the Web GUI enter the IP of the gateway into your browser + the desired action, e.g.:
+## API
+To controll the light send a request to the following URL:
 ```
 http://IP:80/switch/<on/off>
+```
+
+## GUI
+To acces the GUI navigate to:
+```
+http://IP:80/items/<random_number_of_your_liking>
 ```

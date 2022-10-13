@@ -4,11 +4,26 @@
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    <h1>Item ID: {{ id }}</h1>
-    <label class="switch" for="accept">
-        <input type="checkbox" id="accept" name="accept">
-        <span class="slider"></span>
-    </label>
+
+
+    <script type="text/javascript">
+        function onoff(){
+          currentvalue = document.getElementById('onoff').value;
+          if(currentvalue == "Off"){
+            document.getElementById("onoff").value="On";
+            fetch("http://192.168.1.187/switch/off");
+          }else{
+            document.getElementById("onoff").value="Off";
+            fetch("http://192.168.1.187/switch/on");
+          }
+
+        }
+        </script>
+        
+        <input type="button" value="On" id="onoff" onclick="onoff();">
+        
+    
+
 
 
 
