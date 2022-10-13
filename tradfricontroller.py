@@ -15,7 +15,7 @@ parser.add_argument(
 
 parser.add_argument(
     "key",
-    metavar="XYZ",
+    metavar="KEY",
     type=str,
     help="Security Code found on the bottom of the Tradfri device"
 )
