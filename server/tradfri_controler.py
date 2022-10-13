@@ -3,6 +3,7 @@ from pytradfri.api.libcoap_api import APIFactory
 from pytradfri.error import PytradfriError
 import sys
 import uuid
+from flask import jsonify
 IP="192.168.1.109"
 KEY="Zl5EvN4H4u75p77a"
 
