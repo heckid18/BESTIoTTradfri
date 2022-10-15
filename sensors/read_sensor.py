@@ -31,4 +31,4 @@ while True:
                     "smoi":0
                 }
         requests.post(url,json=readings)
-    time.sleep(5)
+    time.sleep(0.5)

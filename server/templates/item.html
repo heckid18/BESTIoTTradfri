@@ -12,11 +12,11 @@
           currentvalue = document.getElementById('status').innerHTML;
           if(currentvalue == "Off"){
             document.getElementById("status").innerHTML="On";
-            fetch("http://192.168.1.187/switch/off");
+            fetch("http://10.20.16.103/switch/off");
             document.getElementById("light").innerHTML='<img src="../static/imgs/idea_on.png" alt="" srcset="" width="32px">'
           }else{
             document.getElementById("status").innerHTML="Off";
-            fetch("http://192.168.1.187/switch/on");
+            fetch("http://10.20.16.103/switch/on");
             document.getElementById("light").innerHTML='<img src="../static/imgs/idea_off.png" alt="" srcset="" width="32px">'
           }
 
